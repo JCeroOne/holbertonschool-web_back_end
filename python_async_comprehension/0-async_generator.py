@@ -5,7 +5,7 @@ import random
 import typing
 
 
-async def async_generator() -> typing.Generator[float]:
+async def async_generator() -> typing.Generator[float, None, None]:
     """Loops 10 times, returning a value in the [0, 10] range after 1 s."""
     for _ in range(10):
         await asyncio.sleep(1)
