@@ -1,0 +1,4 @@
+# Python: Asynchronous Functions
+Normally, when a program is executed, each of its operations is executed after the previous one is finished. This is known as **synchronous programming**, and this way of programming is easy to write and debug because of its predictability. However, when complex and time-consuming operations are needed, this approach can be inefficient, as the program will wait for every task (including those that take a long time) to finish before moving on.
+
+That is where **asynchronous programming** comes in. In this way of programming, certain tasks are allowed to be executed in the background, while the program continues to run the next tasks. This means that time-consuming tasks can be performed while the program continues to run the others, resulting in efficient code execution and less wait time.
