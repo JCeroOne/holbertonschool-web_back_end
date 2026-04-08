@@ -4,8 +4,8 @@ import typing
 
 
 def element_length(
-        lst: typing.Iterable[typing.Sequence]
-    ) -> typing.List[typing.Tuple[typing.Sequence, int]]:
+    lst: typing.Iterable[typing.Sequence]
+) -> typing.List[typing.Tuple[typing.Sequence, int]]:
     """Returns the contents and length of each element in a list.
 
     Parameters:
