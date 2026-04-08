@@ -16,7 +16,7 @@ async def wait_n(n: int, max_delay: int) -> typing.List[float]:
         (list[float]) A list of the delays waited."""
 
     delays: typing.List[float] = []
-    
+
     tasks = [asyncio.create_task(wait_random(max_delay)) for _ in range(n)]
 
     for task in asyncio.as_completed(tasks):
