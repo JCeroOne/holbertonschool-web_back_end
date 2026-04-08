@@ -3,7 +3,7 @@
 import asyncio
 
 
-async def wait_random(max_delay: float) -> float:
+async def wait_random(max_delay:float=10.0) -> float:
     """Waits a random delay and then returns said delay.
 
     Parameters:
