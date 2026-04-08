@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Defines the asynchronous 'wait_random' coroutine."""
 import asyncio
+import random
 
 
-async def wait_random(max_delay:float=10.0) -> float:
+async def wait_random(max_delay:int=10) -> float:
     """Waits a random delay and then returns said delay.
 
     Parameters:
