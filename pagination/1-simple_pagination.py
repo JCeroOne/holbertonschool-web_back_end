@@ -2,10 +2,10 @@
 """Defines the index_range function."""
 import csv
 import math
-import typing
+from typing import List, Tuple
 
 
-def index_range(page: int, page_size: int) -> typing.Tuple[int, int]:
+def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """Returns the edge indices of the given page.
 
     Parameters:
@@ -39,11 +39,12 @@ class Server:
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """Retrieves the entries in a given page."""
+        bounds = index_range(page, page_size)
         rows = []
-        with open("Popular_Baby_Names.csv") as file:
-            reader = csv.reader(f)
-            for i, row in enumerate(reader):
-                if a <= i < b:
-                    rows.append(row)
-                elif i >= b:
-                    break
+
+        for i in range(bounds[0], bounds[1]):
+            rows.append(self.dataset()[i])
+        except IndexError:
+            return []
+        
+        return rows
