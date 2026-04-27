@@ -1,0 +1,2 @@
+// Updates all documents where name="Holberton school" with a new attribute.
+db.school.update({name: "Holberton school"}, {$set: {address: "972 Mission street"}}, {multi: true})
