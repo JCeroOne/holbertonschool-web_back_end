@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Provides some stats about Nginx logs stored in MongoDB."""
+
 from pymongo import MongoClient
 
 
-if name == "__main__":
+if __name__ == "__main__":
     client = MongoClient("mongodb://127.0.0.1:27017")
     nginx = client.logs.nginx
 
