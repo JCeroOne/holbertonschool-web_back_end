@@ -47,8 +47,9 @@ class Server:
         rows = []
 
         for i in range(bounds[0], bounds[1]):
-            rows.append(self.dataset()[i])
-        except IndexError:
-            return []
+            try:
+                rows.append(self.dataset()[i])
+            except IndexError:
+                return []
 
         return rows
