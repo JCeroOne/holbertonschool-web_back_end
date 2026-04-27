@@ -1,0 +1,2 @@
+// Insert entry into the school dataset
+db.school.insert({name: "Holberton school"})
