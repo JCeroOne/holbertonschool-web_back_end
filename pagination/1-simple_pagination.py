@@ -46,5 +46,5 @@ class Server:
             rows.append(self.dataset()[i])
         except IndexError:
             return []
-        
+
         return rows
