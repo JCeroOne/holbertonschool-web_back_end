@@ -61,14 +61,14 @@ class Server:
 
         pages = math.floor(len(self.dataset()) / page_size)
         prv = page - 1 if page > 1 else None
-        nxt = page + 1 if page <= total_pages - 1 else None
+        nxt = page + 1 if page <= pages - 1 else None
         data = self.get_page(page, page_size)
         res = {
-            "page_size": len(data)
+            "page_size": len(data),
             "page": page,
             "data": data,
-            "next_page": next_page,
-            "prev_page": prev_page,
+            "next_page": nxt,
+            "prev_page": prv,
             "total_pages": pages
         }
 
