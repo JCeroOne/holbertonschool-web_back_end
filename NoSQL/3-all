@@ -1,0 +1,2 @@
+// Lists all elements in the school dataset
+db.school.find()
