@@ -5,7 +5,7 @@ Deletion-resilient hypermedia pagination
 
 import csv
 import math
-from typing import List
+from typing import List, Dict
 
 
 class Server:
@@ -50,7 +50,7 @@ class Server:
         assert (0 <= index <= len(dataset))
 
         while len(data) < page_size and i < len(dataset):
-            if i in indexed_dataset:
+            if i in indexed:
                 data.append(dataset[i])
             i += 1
 
