@@ -14,14 +14,11 @@ if __name__ == "__main__":
     methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
 
     for m in methods:
-        print(f"\tmethod {}: {}".format(
+        print("\tmethod {}: {}".format(
             m,
-            nginx.find({"method": m}).count()
+            nginx.count_documents({"method": m})
         ))
 
     print("{} status check".format(
-        nginx.find({
-            "method": "GET",
-            "path": "/status"
-        }).count()
+        nginx.count_documents({"method": "GET", "path": "/status"})
     ))
