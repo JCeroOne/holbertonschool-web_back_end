@@ -1,0 +1,2 @@
+// Switches to my_db, creating it if it doesn't exist.
+use my_db
